@@ -1,4 +1,31 @@
 <body>
+  <h1 class="unit-title">Nueva Aventura Unidad 1</h1>
+  <div class="main-card" class="centered">
+    <mat-card class="mat-card">
+      <h2 class="the-word">{{zkouseneSlovo}}</h2>
+      <h3 class="translated-word" *ngIf="showTranslation">{{zkouseneSlovoPreklad}}</h3>
+      <mat-card-actions>
+        <h3 *ngIf="posledniSlovo">Poslední slovo!!!</h3>
+        <button mat-raised-button color="primary" class="show-translation" (click)="toggle()">{{buttonName}}</button>
+        <br>
+        <br>
+        <button class="not-know-button" mat-raised-button color="primary" *ngIf="!posledniSlovo"
+          (click)="nextWord()">Nevím</button>
+        <button class="know-button" mat-raised-button color="primary" *ngIf="!posledniSlovo"
+          (click)="nextWord(); spravnaOdpoved()">Vím</button>
+        <br>
+        <br>
+        <button class="next-button" mat-raised-button color="accent" *ngIf="!posledniSlovo" (click)="nextWord()">Další
+          slovo</button>
+        <button mat-raised-button color="accent" *ngIf="posledniSlovo" (click)="anotherRound()">Začni znovu</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</body>
+
+
+
+<!-- <body>
 
   <div class="unitName">
     <h2 class="setName">Nueva Aventura 1</h2>
@@ -18,6 +45,4 @@
     <button class="buttonNo">No</button>
     <button class="buttonYes">Yes</button>
   </div>
-</body>
-
-
+</body> -->

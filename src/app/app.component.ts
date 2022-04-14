@@ -15,45 +15,64 @@ export class AppComponent {
   zkouseneSlovoPreklad = this.NA_U1[this.counter].cj;
   prekladSlova = this.nextWord();
   showTranslation: boolean = false;
-  buttonName: string = 'Ukaž překlad';
+  buttonName: string = 'Show';
   posledniSlovo: boolean = false;
-  correctAnswer: number = 1;
-  userObject = {
-    fruit: 'apple',
-  };
+  correctAnswer: number = 0;
+  maxLength = this.NA_U1.length;
 
-  nextWord() {
-    const maxLength = this.NA_U1.length;
-    this.zkouseneSlovo = this.NA_U1[this.counter].sj;
-    this.zkouseneSlovoPreklad = this.NA_U1[this.counter].cj;
-    this.counter = this.counter + 1;
-    console.log(this.counter);
-    console.log(maxLength);
+  spravnaOdpoved(): number {
+    return this.correctAnswer++;
+  }
 
-    if (maxLength == this.counter) {
+  showResult() {
+    console.log(this.spravnaOdpoved());
+  }
+
+  nextWord(): void {
+    this.maxLength = this.NA_U1.length;
+    console.log('úPLNĚ Na začátku' + this.counter);
+    if (this.counter == this.maxLength) {
       this.posledniSlovo = !this.posledniSlovo;
+    } else {
+      this.zkouseneSlovo = this.NA_U1[this.counter].sj;
+      this.zkouseneSlovoPreklad = this.NA_U1[this.counter].cj;
+      this.counter = this.counter + 1;
+      console.log('Slovo číslo ' + this.counter);
+      console.log(this.maxLength);
     }
+
+    /*     if (maxLength == this.counter) {
+      this.posledniSlovo = !this.posledniSlovo;
+
+    } */
 
     const showTranslation = (this.showTranslation = true);
     this.toggle();
   }
 
-  anotherRound() {
-    this.posledniSlovo = !this.posledniSlovo;
-    this.correctAnswer = 0;
-    this.counter = 0;
-    this.nextWord();
+  previousWord() {
+    if (this.counter > 1) {
+      this.counter = this.counter - 1;
+      this.zkouseneSlovo = this.NA_U1[this.counter - 1].sj;
+      this.zkouseneSlovoPreklad = this.NA_U1[this.counter - 1].cj;
+    } else {
+      alert('First word!');
+    }
+    const showTranslation = (this.showTranslation = true);
+    this.toggle();
   }
 
   toggle(): void {
     this.showTranslation = !this.showTranslation;
     // CHANGE THE NAME OF THE BUTTON.
-    if (this.showTranslation) this.buttonName = 'Skryj překlad';
-    else this.buttonName = 'Ukaž překlad';
+    if (this.showTranslation) this.buttonName = 'Hide';
+    else this.buttonName = 'Show';
   }
 
-  spravnaOdpoved() {
-    const spravneSkore: number = this.correctAnswer++;
-    console.log('Vím: ' + spravneSkore);
+  anotherRound(): void {
+    this.posledniSlovo = !this.posledniSlovo;
+    this.correctAnswer = 0;
+    this.counter = 0;
+    this.nextWord();
   }
 }

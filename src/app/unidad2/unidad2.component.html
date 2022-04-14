@@ -1,0 +1,30 @@
+<body>
+  <div class="unitName">
+    <h2 class="setName">Nueva Aventura 1</h2>
+    <h2 class="lessonNo">Lesson 2</h2>
+  </div>
+  <div class="wordCard">
+    <div class="the-word">
+      <h2>{{zkouseneSlovo}}</h2>
+      <h3 class="translated-word" *ngIf="showTranslation">{{zkouseneSlovoPreklad}}</h3>
+      <h3 *ngIf="posledniSlovo">Výsledek: {{spravnaOdpoved()}}({{maxLength}})</h3>
+    </div>
+    <div>
+      <button type="button" (click)="toggle()" class="show-translation">{{buttonName}}</button>
+      <button *ngIf="posledniSlovo" (click)="anotherRound()" class="show-translation">Again</button>
+    </div>
+
+  </div>
+  <div class="buttonBackArea">
+    <button class="buttonBack" type="button" (click)="previousWord()">Back</button>
+  </div>
+  <div class="buttonForwardArea">
+    <button class="buttonForward" type="button" *ngIf="!posledniSlovo" (click)="nextWord()"> Forth</button>
+  </div>
+
+
+  <div class="NoYesButtons">
+    <button class="buttonNo" *ngIf="!posledniSlovo" (click)="nextWord()">Nevím</button>
+    <button class="buttonYes" *ngIf="!posledniSlovo" (click)="nextWord(); spravnaOdpoved()">Vím</button>
+  </div>
+</body>

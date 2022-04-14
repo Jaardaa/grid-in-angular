@@ -1,24 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { NuevaAventuraU1 } from './unidad1/NuevaAventuraU1';
+import { NuevaAventuraU2 } from './NuevaAventuraU2';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-unidad2',
+  templateUrl: './unidad2.component.html',
+  styleUrls: ['./unidad2.component.css', '../app.component.css'],
 })
-export class AppComponent {
-/*   title = 'grid-in-angular';
-  NA_U1 = NuevaAventuraU1;
+export class Unidad2Component implements OnInit {
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  title = 'grid-in-angular';
+  NA_U2 = NuevaAventuraU2;
 
   counter: number = 0;
-  zkouseneSlovo = this.NA_U1[this.counter].sj;
-  zkouseneSlovoPreklad = this.NA_U1[this.counter].cj;
+  zkouseneSlovo = this.NA_U2[this.counter].sj;
+  zkouseneSlovoPreklad = this.NA_U2[this.counter].cj;
   prekladSlova = this.nextWord();
   showTranslation: boolean = false;
   buttonName: string = 'Show';
   posledniSlovo: boolean = false;
   correctAnswer: number = 0;
-  maxLength = this.NA_U1.length;
+  maxLength = this.NA_U2.length;
 
   spravnaOdpoved(): number {
     return this.correctAnswer++;
@@ -29,18 +33,17 @@ export class AppComponent {
   }
 
   nextWord(): void {
-    this.maxLength = this.NA_U1.length;
+    this.maxLength = this.NA_U2.length;
     console.log('úPLNĚ Na začátku' + this.counter);
     if (this.counter == this.maxLength) {
       this.posledniSlovo = !this.posledniSlovo;
     } else {
-      this.zkouseneSlovo = this.NA_U1[this.counter].sj;
-      this.zkouseneSlovoPreklad = this.NA_U1[this.counter].cj;
+      this.zkouseneSlovo = this.NA_U2[this.counter].sj;
+      this.zkouseneSlovoPreklad = this.NA_U2[this.counter].cj;
       this.counter = this.counter + 1;
       console.log('Slovo číslo ' + this.counter);
       console.log(this.maxLength);
     }
-
 
     const showTranslation = (this.showTranslation = true);
     this.toggle();
@@ -49,8 +52,8 @@ export class AppComponent {
   previousWord() {
     if (this.counter > 1) {
       this.counter = this.counter - 1;
-      this.zkouseneSlovo = this.NA_U1[this.counter - 1].sj;
-      this.zkouseneSlovoPreklad = this.NA_U1[this.counter - 1].cj;
+      this.zkouseneSlovo = this.NA_U2[this.counter - 1].sj;
+      this.zkouseneSlovoPreklad = this.NA_U2[this.counter - 1].cj;
     } else {
       alert('First word!');
     }
@@ -70,5 +73,5 @@ export class AppComponent {
     this.correctAnswer = 0;
     this.counter = 0;
     this.nextWord();
-  } */
+  }
 }

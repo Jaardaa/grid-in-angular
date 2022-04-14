@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { NuevaAventuraU1 } from './unidad1/NuevaAventuraU1';
+import { NuevaAventuraU1 } from './NuevaAventuraU1';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-unidad1',
+  templateUrl: './unidad1.component.html',
+  styleUrls: ['./unidad1.component.css', '../app.component.css'],
 })
-export class AppComponent {
-/*   title = 'grid-in-angular';
+export class Unidad1Component implements OnInit {
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  title = 'grid-in-angular';
   NA_U1 = NuevaAventuraU1;
 
   counter: number = 0;
@@ -41,7 +45,6 @@ export class AppComponent {
       console.log(this.maxLength);
     }
 
-
     const showTranslation = (this.showTranslation = true);
     this.toggle();
   }
@@ -70,5 +73,5 @@ export class AppComponent {
     this.correctAnswer = 0;
     this.counter = 0;
     this.nextWord();
-  } */
+  }
 }

@@ -1,0 +1,14 @@
+<header>Slovíčka 1</header>
+
+<body>
+
+
+  <div *ngFor="let SM of SM">
+    <h1>LEKCE {{SM.id}}</h1>
+    <div *ngFor="let cesky of SM.slovicka, let i = index">
+      <p>{{SM.slovicka[i].cj}} - {{SM.slovicka[i].sj}}</p>
+    </div>
+  </div>
+
+
+</body>

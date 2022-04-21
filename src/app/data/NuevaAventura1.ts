@@ -1,4 +1,4 @@
-export interface Vocabulary {
+export interface VsechnyLekce {
   id: number;
   nazev: string;
   slovicka: {
@@ -6,6 +6,15 @@ export interface Vocabulary {
     cj: string;
   }[];
 }[];
+
+export interface JednaLekce {
+  id: number;
+  nazev: string;
+  slovicka: {
+    sj: string;
+    cj: string;
+  }[];
+};
 
 export const NuevaAventuraU1 = [
   {

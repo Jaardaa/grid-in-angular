@@ -1,0 +1,15 @@
+<p>sandbox2 works!</p>
+<h2>Co chceš vědět?  Slovíčko?</h2>
+<h3>{{vsechnyLekce[0].slovicka[0].cj}} - {{vsechnyLekce[0].slovicka[0].sj}}</h3>
+<h2>
+  Nebo všechna slovíčka Lekce č.{{vsechnyLekce[0].id}}?
+</h2>
+<div *ngFor="let slovo of vsechnyLekce[0].slovicka, let i = index">
+    <p>{{vsechnyLekce[0].slovicka[i].cj}} - {{vsechnyLekce[0].slovicka[i].sj}}</p>
+</div>
+<h2>Nebo všechna slovíčka lekce č. {{vsechnyLekce[1].id}}?</h2>
+<div *ngFor="let slovo of jednaLekce.slovicka, let i = index">
+  <p>{{jednaLekce.slovicka[i].cj}} - {{jednaLekce.slovicka[i].sj}}</p>
+</div>
+
+

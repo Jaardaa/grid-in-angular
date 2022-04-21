@@ -15,8 +15,7 @@ export class SandboxComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.showWord();
-    this.showSlovicka()
+
   }
 
   NA_U1 = NuevaAventuraU1;
@@ -25,28 +24,4 @@ export class SandboxComponent implements OnInit {
   simplifiedSM = slovickaMock1[0];
   moreSimplifiedSM = slovickaMock1[0].slovicka
 
-  showWord() {
-    console.log(this.SD);
-    console.log(this.SD.items);
-    console.log(this.SD.items[0]);
-    console.log(this.SD.items[0].id);
-    console.log(this.SD.items[0].name);
-
-  }
-
-  showSlovicka() {
-    console.log(this.SM);
-    console.log(this.SM[0]);
-    console.log(this.SM[0].nazev);
-    console.log(this.SM[0].slovicka);
-    console.log(this.SM[0].slovicka[0]);
-    console.log(this.SM[0].slovicka[0].cj);
-    console.log(this.SM[0].slovicka[0].sj);
-    console.log(this.simplifiedSM.nazev);
-    console.log(this.simplifiedSM.slovicka);
-    console.log(this.simplifiedSM.slovicka[0].cj);
-    console.log(this.moreSimplifiedSM);
-    console.log(this.moreSimplifiedSM[1].cj);
-
-  }
 }

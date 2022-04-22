@@ -9,45 +9,27 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./sandbox3.component.css', '../app.component.css'],
 })
 export class Sandbox3Component implements OnInit {
-  id!: string | null;
-  z!: number;
-  y!: number;
-  onelesson!: JednaLekce;
+
   constructor(
     private pripravDataService: PripravDataService,
     private _Activatedroute: ActivatedRoute
   ) {}
 
   vsechnyLekce: VsechnyLekce[] =
-  this.pripravDataService.pripravDataVsechLekci();
+    this.pripravDataService.pripravDataVsechLekci();
 
-
-  jednaLekce: JednaLekce = this.pripravDataService.pripravDataJedneLekce(2);
-
+  id = this._Activatedroute.snapshot.paramMap.get('id');
+  indexNumber = Number(this.id) - 1;
+  jednaLekce: JednaLekce = this.pripravDataService.pripravDataJedneLekce(
+    this.indexNumber
+  );
 
   ngOnInit(): void {
-    this.id = this._Activatedroute.snapshot.paramMap.get('id');
-    /* console.log(this.jednaLekce); */
-    console.log(typeof (this.id)),
-      this.z = Number(this.id);
-
-    console.log(this.z);
-    console.log(typeof (this.z))
-    this.y = this.secti(this.z);
-    console.log(this.y)
-    this.onelesson = this.sezenLekci(this.z)
-    console.log(this.onelesson)
-    }
- secti(z: number):number{
-   return z + 8;
   }
-  sezenLekci(c: number): JednaLekce {
-    return this.pripravDataService.pripravDataJedneLekce(c);
-
-}
 
   counter: number = 0;
   zkouseneSlovo = this.jednaLekce.slovicka[0].sj;
+
   zkouseneSlovoPreklad = this.jednaLekce.slovicka[0].cj;
   prekladSlova = this.nextWord();
   showTranslation: boolean = false;

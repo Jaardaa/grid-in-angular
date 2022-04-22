@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NuevaAventuraU1 } from '../data/NuevaAventura1';
 import { PripravDataService } from '../services/priprav-data.service';
 import { VsechnyLekce, JednaLekce } from '../data/NuevaAventura1';
 

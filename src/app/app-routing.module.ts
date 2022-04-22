@@ -16,8 +16,11 @@ const routes: Routes = [
     redirectTo: "",
     pathMatch: "full"
   }, */
- 
-  {
+  /*   {
+    path: 'unidad/:id',
+    component: Unidad1Component,
+  }, */
+/*   {
     path: 'unidad1',
     component: Unidad1Component,
   },
@@ -32,11 +35,15 @@ const routes: Routes = [
   {
     path: 'sandbox2',
     component: Sandbox2Component,
-  },
+  }, */
   {
-    path: 'sandbox3',
+    path: 'unidad/:id',
     component: Sandbox3Component,
   },
+/*   {
+    path: 'sandbox3',
+    component: Sandbox3Component,
+  }, */
   {
     path: 'vsechnylekce',
     component: VsechnyLekceComponent,

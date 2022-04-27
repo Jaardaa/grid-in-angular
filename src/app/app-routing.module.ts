@@ -10,17 +10,17 @@ import { Unidad2Component } from './unidad2/unidad2.component';
 import { VsechnyLekceComponent } from './vsechny-lekce/vsechny-lekce.component';
 
 const routes: Routes = [
-  /*   {
+ /*    {
     path: "",
     PAK NĚCO VYBER, ASI VŠECHNY LEKCE
     redirectTo: "",
     pathMatch: "full"
   }, */
-  /*   {
+/*   {
     path: 'unidad/:id',
     component: Unidad1Component,
   }, */
-/*   {
+{
     path: 'unidad1',
     component: Unidad1Component,
   },
@@ -35,15 +35,15 @@ const routes: Routes = [
   {
     path: 'sandbox2',
     component: Sandbox2Component,
-  }, */
+  },
   {
     path: 'unidad/:id',
     component: Sandbox3Component,
   },
-/*   {
+/* {
     path: 'sandbox3',
     component: Sandbox3Component,
-  }, */
+  } */
   {
     path: 'vsechnylekce',
     component: VsechnyLekceComponent,

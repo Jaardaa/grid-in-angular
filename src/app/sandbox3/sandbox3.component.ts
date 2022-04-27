@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PripravDataService } from '../services/priprav-data.service';
 import { VsechnyLekce, JednaLekce } from '../data/NuevaAventura1';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-sandbox3',
@@ -12,7 +12,8 @@ export class Sandbox3Component implements OnInit {
 
   constructor(
     private pripravDataService: PripravDataService,
-    private _Activatedroute: ActivatedRoute
+    private _Activatedroute: ActivatedRoute,
+    private _router: Router,
   ) {}
 
   vsechnyLekce: VsechnyLekce[] =
@@ -25,6 +26,8 @@ export class Sandbox3Component implements OnInit {
   );
 
   ngOnInit(): void {
+
+    /* this._router.navigate([`unidad/${{}}`]) */
   }
 
   counter: number = 0;

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { PripravDataService } from '../services/priprav-data.service';
 import { VsechnyLekce, JednaLekce } from '../data/NuevaAventura1';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-sandbox3',
@@ -9,11 +11,14 @@ import { ActivatedRoute, Router, ParamMap } from '@angular/router';
   styleUrls: ['./sandbox3.component.css', '../app.component.css'],
 })
 export class Sandbox3Component implements OnInit {
+  ajdi!: number;
+
+  oneLesson$!: Observable<JednaLekce>;
 
   constructor(
     private pripravDataService: PripravDataService,
     private _Activatedroute: ActivatedRoute,
-    private _router: Router,
+    private _router: Router
   ) {}
 
   vsechnyLekce: VsechnyLekce[] =
@@ -26,8 +31,20 @@ export class Sandbox3Component implements OnInit {
   );
 
   ngOnInit(): void {
+    this._Activatedroute.params.subscribe((params) => {
+      console.log(params);
 
-    /* this._router.navigate([`unidad/${{}}`]) */
+      this.ajdi = Number(params['id']);
+      console.log(this.ajdi);
+      console.log(typeof this.ajdi);
+      this.pripravDataService.pripravDataJedneLekce(this.ajdi);
+
+    });
+
+    this._router.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    }
+
   }
 
   counter: number = 0;
@@ -51,15 +68,12 @@ export class Sandbox3Component implements OnInit {
 
   nextWord(): void {
     this.maxLength = this.jednaLekce.slovicka.length;
-    console.log('úPLNĚ Na začátku' + this.counter);
     if (this.counter == this.maxLength) {
       this.posledniSlovo = !this.posledniSlovo;
     } else {
       this.zkouseneSlovo = this.jednaLekce.slovicka[this.counter].sj;
       this.zkouseneSlovoPreklad = this.jednaLekce.slovicka[this.counter].cj;
       this.counter = this.counter + 1;
-      console.log('Slovo číslo ' + this.counter);
-      console.log(this.maxLength);
     }
 
     const showTranslation = (this.showTranslation = true);

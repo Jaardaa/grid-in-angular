@@ -6,5 +6,9 @@ body {
 body {
   background-color: cadetblue;
   display: grid;
-  grid: 1fr 1fr / 1fr 1fr
+  grid: 1fr 1fr / 1fr 1fr;
+ font-family: "Pacifico", serif;
+ font-size: 1rem;
 }
+
+

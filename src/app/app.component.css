@@ -4,7 +4,7 @@ body {
 }
 
 body {
-  background-color: cadetblue;
+  background-color: #3BB0FF;
   display: grid;
   grid: 3fr 6fr 3fr / 1fr 4fr 1fr
 }
@@ -38,7 +38,7 @@ body {
   align-items: flex-end;
   align-content: flex-end;
   text-align: center;
-  background-color: rgb(13, 103, 107);
+  background-color: #DFEF0B;
   font-style: italic;
 
 
@@ -76,11 +76,13 @@ h3 {
   grid-template-columns: 100%;
   grid-template-rows: 50% 40% 10%;
   margin-left: 1rem;
+
 }
 
 .buttonBack {
   grid-row: 2 / 3;
   margin-right: 10%;
+  background-color: #2EE3FF;
 }
 
 .buttonForwardArea {
@@ -94,6 +96,7 @@ h3 {
 .buttonForward {
   grid-row: 2 / 3;
   margin-left: 10%;
+  background-color: #2EE3FF;
 }
 
 .NoYesButtons {
@@ -101,25 +104,29 @@ h3 {
   display: grid;
   grid: 1fr 1fr / 10% 30% 20% 30% 10%;
 
+
 }
 
 button {
   font-size: 16px;
   margin-top: 10%;
+  background-color: #2EE3FF;
 }
 
 .buttonYes {
   grid-area: 1 / 4 / 2 / 5;
+  background-color: #2EE3FF;
 }
 
 .buttonNo {
   grid-area: 1 / 2 / 2 / 3;
+  background-color: #2EE3FF;
 }
 
 @media screen and (min-width:900px) {
 
   body {
-    background-color: cadetblue;
+    background-color:#3BB0FF;
     display: grid;
     grid: 3fr 6fr 3fr / 4fr 4fr 4fr
   }
@@ -150,7 +157,7 @@ button {
     display: grid;
     align-items: center;
     text-align: center;
-    background-color: rgb(13, 103, 107);
+    background-color: #DFEF0B;
     font-style: italic;
 
   }
@@ -171,7 +178,8 @@ button {
     grid-row: 2 / 3;
     margin-right: 5%;
     justify-self: flex-end;
-    width: 30%
+    width: 30%;
+    background-color: #2EE3FF;
   }
 
   .buttonForwardArea {
@@ -185,7 +193,8 @@ button {
     grid-row: 2 / 3;
     margin-left: 5%;
     justify-self: flex-start;
-    width: 30%
+    width: 30%;
+    background-color: #2EE3FF;
   }
 
   .NoYesButtons {
@@ -198,14 +207,17 @@ button {
   button {
     font-size: 1.6rem;
     margin-top: 10%;
+    background-color: #2EE3FF;
   }
 
   .buttonYes {
     grid-area: 1 / 4 / 2 / 5;
+    background-color: #2EE3FF;
   }
 
   .buttonNo {
     grid-area: 1 / 2 / 2 / 3;
+    background-color: #2EE3FF;
   }
 }
 

@@ -2,6 +2,17 @@
   <div *ngFor="let lekce of vsechnyLekce">
     <h1>LEKCE {{lekce.id}}</h1>
     <button style="margin-top: 0" [routerLink]="['/unidad',lekce.id]">Unidad {{lekce.id}}</button>
+      <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+      <span class="material-icons">
+        check
+      </span>
+      <span class="material-icons">
+        check
+      </span>
+      <span class="material-icons">
+        refresh
+      </span>
   </div>
-<!-- <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon> -->
+
+
 </body>

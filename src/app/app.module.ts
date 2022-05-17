@@ -12,6 +12,9 @@ import { SandboxComponent } from './sandbox/sandbox.component';
 import { VsechnyLekceComponent } from './vsechny-lekce/vsechny-lekce.component';
 import { Sandbox2Component } from './sandbox2/sandbox2.component';
 import { Sandbox3Component } from './sandbox3/sandbox3.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatIconRegistry } from '@angular/material/icon';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +31,10 @@ import { Sandbox3Component } from './sandbox3/sandbox3.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
+    MatIconModule,
     
+
+
 
   ],
   providers: [],

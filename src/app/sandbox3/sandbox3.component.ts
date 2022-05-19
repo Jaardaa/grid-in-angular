@@ -4,6 +4,7 @@ import { VsechnyLekce, JednaLekce } from '../data/NuevaAventura1';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { NoButtonComponent } from '../buttons/no-button/no-button.component';
 
 @Component({
   selector: 'app-sandbox3',

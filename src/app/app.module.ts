@@ -14,6 +14,7 @@ import { Sandbox2Component } from './sandbox2/sandbox2.component';
 import { Sandbox3Component } from './sandbox3/sandbox3.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatIconRegistry } from '@angular/material/icon';
+import { NoButtonComponent } from './buttons/no-button/no-button.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MatIconRegistry } from '@angular/material/icon';
     SandboxComponent,
     VsechnyLekceComponent,
     Sandbox2Component,
-    Sandbox3Component
+    Sandbox3Component,
+    NoButtonComponent
   ],
   imports: [
     BrowserModule,

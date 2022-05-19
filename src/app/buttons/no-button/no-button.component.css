@@ -1,0 +1,41 @@
+/*Responsive square
+*/
+
+.no-button-container {
+  display: grid;
+}
+
+.responsive_square {
+  background-color: cadetblue;
+  position: relative;
+  width: 10%;
+
+}
+
+.responsive_square::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+/* Responsive cross */
+.line {
+  background: black;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  height: 10%;
+  width: 60%;
+  transform: rotate(-45deg);
+}
+
+.line2 {
+  background: black;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  height: 10%;
+  width: 60%;
+  transform: rotate(45deg);
+}
+

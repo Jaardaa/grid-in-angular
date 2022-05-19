@@ -24,7 +24,12 @@
 
 
   <div class="NoYesButtons">
-    <button class="buttonNo" *ngIf="!posledniSlovo" (click)="nextWord()">Nevím</button>
+    <div>
+
+    </div>
+    <button class="buttonNo" *ngIf="!posledniSlovo" (click)="nextWord()">
+      Nevím</button>
+
     <button class="buttonYes" *ngIf="!posledniSlovo" (click)="nextWord(); spravnaOdpoved()">Vím</button>
   </div>
 </body>

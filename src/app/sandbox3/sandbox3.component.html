@@ -24,11 +24,9 @@
 
 
   <div class="NoYesButtons">
-    <div>
-
-    </div>
-    <button class="buttonNo" *ngIf="!posledniSlovo" (click)="nextWord()">
-      Nevím</button>
+ <!--    <app-no-button routerLink="/vsechnylekce"></app-no-button> -->
+    <app-no-button class="buttonNo" *ngIf="!posledniSlovo" (click)="nextWord()">
+      </app-no-button>
 
     <button class="buttonYes" *ngIf="!posledniSlovo" (click)="nextWord(); spravnaOdpoved()">Vím</button>
   </div>

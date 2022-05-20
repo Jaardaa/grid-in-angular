@@ -120,7 +120,7 @@ button {
 
 .buttonNo {
   grid-area: 1 / 2 / 2 / 3;
-  background-color: #2EE3FF;
+
 }
 
 @media screen and (min-width:900px) {
@@ -212,12 +212,13 @@ button {
 
   .buttonYes {
     grid-area: 1 / 4 / 2 / 5;
-    background-color: #2EE3FF;
+  
+
   }
 
   .buttonNo {
     grid-area: 1 / 2 / 2 / 3;
-    background-color: #2EE3FF;
+
   }
 }
 

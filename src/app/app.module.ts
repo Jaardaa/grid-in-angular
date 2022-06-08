@@ -15,6 +15,9 @@ import { Sandbox3Component } from './sandbox3/sandbox3.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatIconRegistry } from '@angular/material/icon';
 import { NoButtonComponent } from './buttons/no-button/no-button.component';
+import { YesButtonComponent } from './buttons/yes-button/yes-button.component';
+import { BackButtonComponent } from './buttons/back-button/back-button.component';
+import { ForwardButtonComponent } from './buttons/forward-button/forward-button.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { NoButtonComponent } from './buttons/no-button/no-button.component';
     VsechnyLekceComponent,
     Sandbox2Component,
     Sandbox3Component,
-    NoButtonComponent
+    NoButtonComponent,
+    YesButtonComponent,
+    BackButtonComponent,
+    ForwardButtonComponent
   ],
   imports: [
     BrowserModule,

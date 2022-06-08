@@ -16,18 +16,19 @@
 
   </div>
   <div class="buttonBackArea">
-    <button class="buttonBack" type="button" (click)="previousWord()">Back</button>
+    <app-back-button class="button-back-position" (click)="previousWord()"></app-back-button>
   </div>
   <div class="buttonForwardArea">
-    <button class="buttonForward" type="button" *ngIf="!posledniSlovo" (click)="nextWord()"> Forth</button>
+    <app-forward-button class="button-forward-position" *ngIf="!posledniSlovo" (click)="nextWord()"></app-forward-button>
+    <!-- <button class="buttonForward" type="button" *ngIf="!posledniSlovo" (click)="nextWord()"> Forth</button> -->
   </div>
 
 
   <div class="NoYesButtons">
- <!--    <app-no-button routerLink="/vsechnylekce"></app-no-button> -->
-    <app-no-button class="buttonNo" *ngIf="!posledniSlovo" (click)="nextWord()">
-      </app-no-button>
 
-    <button class="buttonYes" *ngIf="!posledniSlovo" (click)="nextWord(); spravnaOdpoved()">Vím</button>
+    <app-no-button class="buttonNo" *ngIf="!posledniSlovo" (click)="nextWord()">
+    </app-no-button>
+
+    <app-yes-button class="buttonYes" *ngIf="!posledniSlovo" (click)="nextWord(); spravnaOdpoved()"></app-yes-button>
   </div>
 </body>

@@ -1,0 +1,46 @@
+.back-button-container {
+  width:100%;
+  margin-top: 9%;
+  margin-right: 2%;
+}
+
+.responsive-square-back {
+  position: relative;
+  left:10%;
+  top: 16%;
+  width: 60%;
+  border: solid black;
+  border-width: 0 2.5vh 2.5vh 0;
+  transform: rotate(135deg);
+}
+
+.responsive-square-back::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+/* For bigger screens */
+@media screen and (min-width:900px) {
+  .back-button-container {
+      width: 30%;
+      margin-top: 9%;
+      margin-right: 2%;
+    }
+
+    .responsive-square-back {
+      position: relative;
+      left: 30%;
+      top: 16%;
+      width: 60%;
+      border: solid black;
+      border-width: 0 2.5vh 2.5vh 0;
+      transform: rotate(135deg);
+    }
+
+    .responsive-square-back::after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+}

@@ -1,0 +1,46 @@
+/* Responsive square - holder for a tick */
+.yes-button-container {
+  display: grid;
+  margin-top: 10%;
+}
+
+.responsive_square {
+  background-color: #3BB0FF;
+  position: relative;
+  width: 100%;
+}
+
+.responsive_square::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+/* Responsive tick */
+.tick::before {
+  position: absolute;
+  content: "";
+  left: 16%;
+  top: 47%;
+  width: 20%;
+  height: 50%;
+  background-color: black;
+  transform: rotate(-45deg) /* translateX(0.5%) */;
+  transform-origin: center;
+}
+
+.tick::after {
+  position: absolute;
+  left: 18%;
+  bottom: 29%;
+  content: "";
+  background-color: black;
+  width: 85%;
+  height: 20%;
+  transform: rotate(-44deg);
+    /* translateX(50%) translateY(500%) */
+  transform-origin: center;
+
+}
+
+

@@ -1,0 +1,107 @@
+.obsah {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 1fr 2fr 1fr;
+
+}
+
+.item1 {
+  background-color: rgb(138, 230, 138);
+}
+
+.item2 {
+  background-color: lightgreen;
+  /* display:flex; */
+ /*  justify-content: center; */
+}
+
+.item3 {
+  background-color: rgb(57, 208, 57);
+
+}
+
+.item4 {
+  background-color: rgb(115, 182, 115);
+  display: flex;
+  align-items: flex-end;
+
+}
+
+.item5 {
+  background-color: rgb(48, 227, 48);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item6 {
+  background-color: rgb(83, 173, 83);
+  display: flex;
+  align-items: flex-end;
+}
+
+.item7 {
+  background-color: rgb(138, 230, 138);
+}
+
+.item8 {
+  background-color: lightgreen;
+}
+
+.item9 {
+  background-color: rgb(57, 208, 57);
+}
+
+#FB {
+  font-size: 15vw;
+  height: auto;
+  width: auto;
+}
+
+#BB {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+}
+#BB_item {
+
+  font-size: 15vw;
+  height: auto;
+  width: auto;
+
+}
+
+.cube {
+  width: 20vw;
+  height: 20vw;
+  background-color: pink;;
+}
+/* .material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 48
+}
+ */
+.chevron_left{
+ font-size: 500%;
+  height: auto;
+  width:auto;
+}
+.chevron_right {
+  font-size: 500%;
+  height: auto;
+  width: auto;
+
+}
+#mat_icon {
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height:100%;
+  width:100%;
+}

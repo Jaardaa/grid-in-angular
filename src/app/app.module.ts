@@ -18,6 +18,7 @@ import { NoButtonComponent } from './buttons/no-button/no-button.component';
 import { YesButtonComponent } from './buttons/yes-button/yes-button.component';
 import { BackButtonComponent } from './buttons/back-button/back-button.component';
 import { ForwardButtonComponent } from './buttons/forward-button/forward-button.component';
+import { Sandbox4Component } from './sandbox4/sandbox4.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ForwardButtonComponent } from './buttons/forward-button/forward-button.
     NoButtonComponent,
     YesButtonComponent,
     BackButtonComponent,
-    ForwardButtonComponent
+    ForwardButtonComponent,
+    Sandbox4Component
   ],
   imports: [
     BrowserModule,

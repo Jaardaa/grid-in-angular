@@ -13,3 +13,8 @@ body {
 div {
   background-color: aliceblue;
 }
+
+mat-icon {
+  font-size: 5rem;
+  /* display: flex; */
+}

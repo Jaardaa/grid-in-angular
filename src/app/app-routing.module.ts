@@ -9,6 +9,7 @@ import { Sandbox4Component } from './sandbox4/sandbox4.component';
 import { Unidad1Component } from './unidad1/unidad1.component';
 import { Unidad2Component } from './unidad2/unidad2.component';
 import { VsechnyLekceComponent } from './vsechny-lekce/vsechny-lekce.component';
+import { CardComponent } from './card/card.component';
 
 const routes: Routes = [
   /*    {
@@ -52,6 +53,10 @@ const routes: Routes = [
   {
     path: 'vsechnylekce',
     component: VsechnyLekceComponent,
+  },
+  {
+    path: 'card',
+    component: CardComponent,
   },
   /* SPUSTIT AŽ BUDE LANDING PAGE
 /*   {

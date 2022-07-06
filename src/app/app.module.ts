@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,8 @@ import { YesButtonComponent } from './buttons/yes-button/yes-button.component';
 import { BackButtonComponent } from './buttons/back-button/back-button.component';
 import { ForwardButtonComponent } from './buttons/forward-button/forward-button.component';
 import { Sandbox4Component } from './sandbox4/sandbox4.component';
+import { CardComponent } from './card/card.component';
+import { TopNavComponent } from './top-nav/top-nav.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { Sandbox4Component } from './sandbox4/sandbox4.component';
     YesButtonComponent,
     BackButtonComponent,
     ForwardButtonComponent,
-    Sandbox4Component
+    Sandbox4Component,
+    CardComponent,
+    TopNavComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,7 @@ import { Sandbox4Component } from './sandbox4/sandbox4.component';
     BrowserAnimationsModule,
     MatCardModule,
     MatIconModule,
-    
+    MatToolbarModule,
 
 
 

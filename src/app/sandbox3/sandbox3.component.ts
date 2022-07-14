@@ -32,20 +32,20 @@ export class Sandbox3Component implements OnInit {
   );
 
   ngOnInit(): void {
-    this._Activatedroute.params.subscribe((params) => {
+/* this._Activatedroute.params.subscribe((params) => {
       console.log(params);
+      console.log(this.vsechnyLekce);
+      console.log(this.jednaLekce.slovicka[5].cj);
 
       this.ajdi = Number(params['id']);
       console.log(this.ajdi);
       console.log(typeof this.ajdi);
-      this.pripravDataService.pripravDataJedneLekce(this.ajdi);
-
-    });
+      console.log(this.pripravDataService.pripravDataJedneLekce(this.ajdi));
+    }); */
 
     this._router.routeReuseStrategy.shouldReuseRoute = function () {
       return false;
-    }
-
+    };
   }
 
   counter: number = 0;
